@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body .left-aligned-heading {
+            background: url("rainbows.gif") no-repeat center center fixed;
+            background-size: 100% 100%;
+            border: none;
+            padding: 15px;
+            margin: 0px;
+            width: 100%;
+        }
+
+        .block {
+            display: block;
+            width: 520px;
+            border: none;
+            background-color: black;
+            padding: 14px 28px;
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1520px;
+            margin: 0 auto;
+        }
+
+        .button-container .button+.button {
+            margin-left: 0;
+        }
+
+        .positioned-text {
+            max-width: 670px;
+            position: absolute;
+            top: 170px;
+            left: 425px;
+            padding: 20px;
+        }
+
+        .main-content {
+            padding-bottom: 50px;
+        }
+
+        body {
+            cursor: url('cursor.gif'), auto;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: black;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        body::after {
+            content: "";
+            height: 50px;
+            display: block;
+        }
+
+        body.scroll-footer-visible footer {
+            opacity: 1;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: calc(100vh + 300px);
+            background: linear-gradient(to top, white, #FF00B0, #AA00FF, #0033FF, #00C9FF, #32FF00, #FFFB00, #FF9200, #FF2D00, white);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .button {
+            top: 65px;
+            left: -60px;
+            display: inline-flex;
+            align-items: center;
+            padding: 0px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .icon-button {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: inline-flex;
+            align-items: center;
+            background-color: transparent;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .icon-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 0px;
+        }
+
+        .image-container img {
+            flex: 0 0 auto;
+        }
+
+        .gif-image {
+            position: absolute;
+            top: 130px;
+            left: 700px;
+        }
+
+        .border-image {
+            position: absolute;
+            top: 165px;
+            left: 470px;
+        }
+
+        body {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .vertical-images {
+            display: flex;
+            flex-direction: column;
+            margin: 0px;
+        }
+
+        .custom-image {
+            position: absolute;
+            top: 450px;
+            left: 1150px;
+        }
+
+        .heart-image {
+            position: absolute;
+            top: 870px;
+            left: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.addEventListener("scroll", function () {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                document.body.classList.add("scroll-footer-visible");
+            } else {
+                document.body.classList.remove("scroll-footer-visible");
+            }
+        });
+    </script>
+    <center>
+        <h1 class="left-aligned-heading"> Emma's Website </h1>
+    </center>
+    <div class="icon-button">
+        <a href="index.html">
+            <img src="house.png" alt="Icon">
+        </a>
+
+    </div>
+    <div class="button">
+        <a href="favorites.html">
+            <button type="button" class="block"> Favorites </button>
+        </a>
+        <a href="spots.html">
+            <button type="button" class="block"> Spots </button>
+        </a>
+        <a href="skills.html">
+            <button type="button" class="block"> Skills </button>
+        </a>
+
+    </div>
+
+    <div class="image-container">
+        <img src="bigRainbowCuffs.jpg" alt="It's me!" style="width: 400px; height: 290px;">
+        <img src="colorCuffs.jpg" alt="It's me!" style="width: 400px; height: 327px;">
+    </div>
+
+    <div class="vertical-images">
+        <img src="smallRainbowCuffs.jpg" alt="It's me!" style="width: 400px; height: 290px;">
+    </div>
+
+    <div class="heart-image">
+        <img src="hearts.gif" alt="hearts"">
+    </div>
+
+    <div class=" custom-image">
+        <video width="250" height="333" controls>
+            <source src="rotate.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="gif-image">
+        <img src="welcome.gif" alt="welcome">
+    </div>
+    <div class="border-image">
+        <img src="stripes.gif" alt="border"">
+    </div>
+        <div class=" positioned-text">
+        <h2> Skills </h2>
+        <p> one skill i want to share is kandi! </p>
+        <p> ☮ what is kandi? - kandi is a type of beaded craft that primarily uses pony beads and other plastic beads.
+            it is most commonly associated with jewelry but you can make bags, charms, and even clothes with it!</p>
+        <p> ☮ i like making kandi because it goes very well with my outfits and i find it to be a very creative and
+            relaxing process! </p>
+        <p> ☮ i consider this a skill of mine because it took time to get to my level of skill! i started off making
+            single bracelets and smaller cuffs and now i have made many different things! </p>
+        <p> ☮ some examples of things i have made include: </p>
+        <ul>
+            <li>rotating cuffs! as shown in the video! these are bracelets that have a rotating component to them, which
+                are very fun to fidget with!</li>
+            <li>multistitch cuffs! these are good for patterns, such as leopard print, or a frog! they're like pixel
+                art, with each bead being a pixel!</li>
+            <li>flower cuffs! these cuffs resemble a chain of flowers! they're really cute!</li>
+            <li>ladder cuffs! these are what they sound like, they are made vertically like a ladder, rather than
+                horizontally like most bracelets. </li>
+            <li>x-base cuffs! these are quite versatile and are used as the based for many kinds of cuffs!</li>
+            <li>these are not shown, but i've made some other cool things are aren't jewelry including: headbands,
+                goggles, a tie, and keychains </li>
+        </ul>
+        <p> ☮ some things i still want to make include: </p>
+        <ul>
+            <li>a purse! i've yet to find a rainbow purse so it would be really cool to make my own so that i can make
+                it the perfect size!</li>
+            <li>a slinky cuff. i've been putting off making this! i have the materials but for some reason i'm a bit
+                hesitant!</li>
+            <li>a skirt! this is a big project but kandi skirts look so cute!</li>
+        </ul>
+
+    </div>
+    <footer>
+        <p> Copyright © Emma Katz 2023. All rights reserved. </p>
+    </footer>
+</body>
+
+</html>
