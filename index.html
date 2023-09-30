@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--
+    This is my website!
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body .left-aligned-heading {
+            background: url("rainbows.gif") no-repeat center center fixed;
+            background-size: 100% 100%;
+            border: none;
+            padding: 15px;
+            margin: 0px;
+            width: 100%;
+        }
+
+        .block {
+            display: block;
+            width: 520px;
+            border: none;
+            background-color: black;
+            padding: 14px 28px;
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1520px;
+            margin: 0 auto;
+        }
+
+        .button-container .button+.button {
+            margin-left: 0;
+        }
+
+        .positioned-text {
+            max-width: 400px;
+            position: absolute;
+            top: 170px;
+            left: 615px;
+        }
+
+        body {
+            cursor: url('cursor.gif'), auto;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: black;
+            color: white;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(to top, white, #FF00B0, #AA00FF, #0033FF, #00C9FF, #32FF00, #FFFB00, #FF9200, #FF2D00, white);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .button {
+            top: 65px;
+            left: -50px;
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(to right, #FF00B0, #AA00FF, #0033FF, #00C9FF #32FF00, #FFFB00, #FF9200, #FF2D00);
+            padding: 0px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .icon-button {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: inline-flex;
+            align-items: center;
+            background-color: transparent;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .icon-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image-container img {
+            flex: 0 0 auto;
+        }
+
+        .gif-image {
+            position: absolute;
+            top: 130px;
+            left: 700px;
+        }
+
+        .border-image {
+            position: absolute;
+            top: 165px;
+            left: 550px;
+        }
+
+        body {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .star-image {
+            position: absolute;
+            top: 590px;
+            left: 630px;
+        }
+
+        .extra-image {
+            position: absolute;
+            top: 620px;
+            left: 620px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1 class="left-aligned-heading"> Emma's Website </h1>
+    </center>
+    <div class="icon-button">
+        <a href="index.html">
+            <img src="house.png" alt="Icon">
+        </a>
+
+    </div>
+    <div class="button">
+        <a href="favorites.html">
+            <button type="button" class="block"> Favorites </button>
+        </a>
+        <a href="spots.html">
+            <button type="button" class="block"> Spots </button>
+        </a>
+        <a href="skills.html">
+            <button type="button" class="block"> Skills </button>
+        </a>
+
+    </div>
+
+    <div class="image-container">
+        <img src="me.jpg" alt="It's me!" style="width: 400px; height: 533px;">
+        <img src="me1.jpg" alt="It's me!" style="width: 400px; height: 533px;">
+    </div>
+    <div class="extra-image">
+        <img src="C:\Users\xlove\Pictures\creativity\rainbow\tumblr_c5c003ee8c9e1cb079c74210a7ff798e_af39601f_1280.png"
+            alt="yes" style="width: 320px; height: 77px;">
+    </div>
+    <div class="gif-image">
+        <img src="welcome.gif" alt="welcome">
+    </div>
+    <div class="border-image">
+        <img src="border.gif" alt="border"">
+    </div>
+    <div class=" star-image">
+        <img src="stars.gif" alt="stars"">
+    </div>
+        <div class=" positioned-text">
+        <h2> About </h2>
+        <p> hello! welcome to my website! i hope you like it! </p>
+        <p> basic info about me: </p>
+        <p> ☮ my name is emma! </p>
+        <p> ☮ im a software major (who would have guessed?) </p>
+        <p> ☮ i was born in february </p>
+        <p> ☮ i like rainbows!!! (again, who would have guessed? im telling you top secret information here!) </p>
+        <p> ☮ i am very cool yesyes </p>
+        <p> ☮ music : letter by mother mother (amazing band!! go check them out!!) </p>
+        <p> ☮ click the other pages to find out more! </p>
+    </div>
+    <audio controls>
+        <source src="letter.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <footer>
+        <p> Copyright © Emma Katz 2023. All rights reserved. </p>
+    </footer>
+</body>
+
+</html>

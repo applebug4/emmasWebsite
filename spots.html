@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body .left-aligned-heading {
+            background: url("rainbows.gif") no-repeat center center fixed;
+            background-size: 100% 100%;
+            border: none;
+            padding: 15px;
+            margin: 0px;
+            width: 100%;
+        }
+
+        .block {
+            display: block;
+            width: 520px;
+            border: none;
+            background-color: black;
+            padding: 14px 28px;
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1520px;
+            margin: 0 auto;
+        }
+
+        .button-container .button+.button {
+            margin-left: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+            background-color: white;
+        }
+
+        .custom-table {
+            width: 25%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            position: absolute;
+            top: 455px;
+            left: 570px;
+        }
+
+        .positioned-text {
+            max-width: 460px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            top: 160px;
+            left: 500px;
+        }
+
+        .table-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .main-content {
+            padding-bottom: 50px;
+        }
+
+        body {
+            cursor: url('cursor.gif'), auto;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: black;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        body::after {
+            content: "";
+            height: 50px;
+            display: block;
+        }
+
+        body.scroll-footer-visible footer {
+            opacity: 1;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: calc(100vh + 300px);
+            background: linear-gradient(to top, white, #FF00B0, #AA00FF, #0033FF, #00C9FF, #32FF00, #FFFB00, #FF9200, #FF2D00, white);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .button {
+            top: 65px;
+            left: -60px;
+            display: inline-flex;
+            align-items: center;
+            padding: 0px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .icon-button {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: inline-flex;
+            align-items: center;
+            background-color: transparent;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .icon-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 0px;
+        }
+
+        .image-container img {
+            flex: 0 0 auto;
+        }
+
+        .gif-image {
+            position: absolute;
+            top: 130px;
+            left: 700px;
+        }
+
+        .border-image {
+            position: absolute;
+            top: 165px;
+            left: 685px;
+        }
+
+        body {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .vertical-images {
+            display: flex;
+            flex-direction: column;
+            margin: 0px;
+        }
+
+        .custom-image {
+            position: absolute;
+            top: 450px;
+            left: 1290px;
+        }
+
+        .custom-image1 {
+            position: absolute;
+            top: 450px;
+            left: 250px;
+        }
+
+        .custom-image2 {
+            position: absolute;
+            top: 119px;
+            left: 250px;
+        }
+
+        .custom-image3 {
+            position: absolute;
+            top: 119px;
+            left: 1020px;
+        }
+
+        .custom-image4 {
+            position: absolute;
+            top: 450px;
+            left: 1020px;
+        }
+
+        .circle-image {
+            position: absolute;
+            top: 760px;
+            left: 540px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var form = document.getElementById("myForm");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent the default form submission behavior
+
+                // Retrieve the form data
+                var message = document.getElementById("message").value;
+
+                // Perform any processing or validation here
+                // For this example, we'll just display the submitted data
+                alert("Your favorite place in NYC is: " + message);
+
+                // You can also send the data to a server using AJAX if needed
+            });
+        });
+        window.addEventListener("scroll", function () {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                document.body.classList.add("scroll-footer-visible");
+            } else {
+                document.body.classList.remove("scroll-footer-visible");
+            }
+        });
+    </script>
+    <center>
+        <h1 class="left-aligned-heading"> Emma's Website </h1>
+    </center>
+    <div class="icon-button">
+        <a href="index.html">
+            <img src="house.png" alt="Icon">
+        </a>
+
+    </div>
+    <div class="button">
+        <a href="favorites.html">
+            <button type="button" class="block"> Favorites </button>
+        </a>
+        <a href="spots.html">
+            <button type="button" class="block"> Spots </button>
+        </a>
+        <a href="skills.html">
+            <button type="button" class="block"> Skills </button>
+        </a>
+
+    </div>
+
+    <div class="image-container">
+        <img src="bridge.jpg" alt="Bridge" style="width: 250px; height: 333px;">
+        <img src="flowers.jpg" alt="Flowers" style="width: 250px; height: 333px;">
+    </div>
+
+    <div class="vertical-images">
+        <img src="mural.jpg" alt="Mural" style="width: 250px; height: 333px;">
+    </div>
+
+    <div class="custom-image1">
+        <img src="saltmarsh.jpg" alt="Salt marsh" style="width: 250px; height: 333px;">
+    </div>
+
+    <div class="custom-image2">
+        <img src="snow.jpg" alt="Snow" style="width: 250px; height: 333px;">
+    </div>
+
+    <div class="custom-image3">
+        <img src="lanterns.jpg" alt="Lanterns" style="width: 250px; height: 333px;">
+    </div>
+
+    <div class="custom-image4">
+        <img src="cute.jpg" alt="Plushies" style="width: 250px; height: 333px;">
+    </div>
+
+    <div class="circle-image">
+        <img src="circles.gif" alt="circles"">
+    </div>
+
+    <div class="custom-image">
+        <video width="250" height="333" controls>
+            <source src="jtrain.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="gif-image">
+        <img src="welcome.gif" alt="welcome">
+    </div>
+    <div class="border-image">
+        <img src="music.gif" alt="border"">
+    </div>
+    <div style=" max-width: 400px; margin: 0 auto; padding: 20px;">
+        <form id="myForm">
+            <label for="Question">What's your favorite place you've gone in NYC?</label>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea>
+            <input type="submit" value="Submit">
+    </div>
+    </form>
+    <div class="table-container">
+        <div class="positioned-text">
+            <h2> Spots </h2>
+            <p> ☮ there are lots of cool spots in nyc! i love visiting new ones and deciding if i like them! </p>
+            <p> ☮ in fact, i have spreadsheets where i keep track of trains, buses, and neighborhoods i visit and the
+                date! </p>
+            <p> ☮ but i wouldn't be able to fit all of that here, so instead, i have a table of good and bad places, in
+                my opinion of course! </p>
+            <p> ☮ the images depict some of the good places listed! hope you like it! </p>
+
+        </div>
+        <table class="custom-table" border="1">
+            <tr>
+                <th>Good Places</th>
+                <th>Bad Places</th>
+            </tr>
+            <tr>
+                <td>Brooklyn Botanic Gardens</td>
+                <td>Bergen Beach</td>
+            </tr>
+            <tr>
+                <td>Japan Village</td>
+                <td>This school (jk)</td>
+            </tr>
+            <tr>
+                <td>Marine Park Salt Marsh</td>
+                <td>There</td>
+            </tr>
+            <tr>
+                <td>Brooklyn Bridge Park</td>
+                <td>are</td>
+            </tr>
+            <tr>
+                <td>Staten Island Mall</td>
+                <td>not</td>
+            </tr>
+            <tr>
+                <td>The piers along the Hudson River</td>
+                <td>many</td>
+            </tr>
+            <tr>
+                <td>Barnes & Noble</td>
+                <td>bad</td>
+            </tr>
+            <tr>
+                <td>East Village</td>
+                <td>places</td>
+            </tr>
+            <tr>
+                <td>The high line</td>
+                <td>because</td>
+            </tr>
+            <tr>
+                <td>Oasis Park</td>
+                <td>NYC</td>
+            </tr>
+            <tr>
+                <td>Brighton Beach</td>
+                <td>is</td>
+            </tr>
+            <tr>
+                <td>..And many more I've yet to explore!</td>
+                <td>awesome!</td>
+            </tr>
+
+
+        </table>
+    </div>
+    <footer>
+        <p> Copyright © Emma Katz 2023. All rights reserved. </p>
+    </footer>
+</body>
+
+</html>
